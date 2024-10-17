@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBOBO App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="banner">
+            <p>Welcome to the OBOBO App!</p>
+        </header>
+        
+        <h1>OBOBO App</h1>
+        
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="stopwatch" aria-label="Stopwatch Tab">Stopwatch</button>
+            <button class="tab-button" data-tab="laptimer" aria-label="Lap Timer Tab">Lap Timer</button>
+            <button class="tab-button" data-tab="alarm" aria-label="Alarm Tab">Alarm</button>
+        </nav>
+        
+        <div class="tab-content">
+            <div id="stopwatch" class="tab-pane active">
+                <div class="time-display">04:13:00.00</div>
+                <div class="controls">
+                    <button id="stopwatch-startstop" aria-label="Start/Stop Stopwatch">Start</button>
+                    <button id="stopwatch-reset" aria-label="Reset Stopwatch">Reset</button>
+                </div>
+            </div>
+            <div id="laptimer" class="tab-pane">
+                <div class="time-display">00:08:00.00</div>
+                <div class="controls">
+                    <button id="laptimer-startstop" aria-label="Start/Stop Lap Timer">Start</button>
+                    <button id="laptimer-lap" aria-label="Record Lap">Lap</button>
+                    <button id="laptimer-reset" aria-label="Reset Lap Timer">Reset</button>
+                </div>
+                <div id="lap-list"></div>
+            </div>
+            <div id="alarm" class="tab-pane">
+                <input type="time" id="alarm-time" aria-label="Set Alarm Time">
+                <button id="alarm-set" aria-label="Set Alarm">Set Alarm</button>
+                <div id="alarm-display"></div>
+            </div>
+        </div>
+        
+        <div class="instructions-box">
+            <h2>How to Use</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; COMP.5211 2024</p>
+        </footer>
+    </div>
+    
+    <audio id="alarm-sound" src="alert-alarm.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
